@@ -25,7 +25,7 @@ data = np.asarray([sheet.row_values(i) for i in range(1, sheet.nrows)])
 n_samples = sheet.nrows - 1
 
 # Step 2: create placeholders for input X (number of fire) and label Y (number of theft)
-X = tf.placeholder(tf.float32, name='X')
+X = tf.placeholder(tf.float32, name='X')  # 如果加上 trainable=False，结果误差更小？
 Y = tf.placeholder(tf.float32, name='Y')
 
 # Step 3: create weight and bias, initialized to 0
