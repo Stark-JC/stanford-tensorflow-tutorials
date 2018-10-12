@@ -42,12 +42,12 @@ class SkipGramModel:
         """ Step 1: define the placeholders for input and output """
         with tf.name_scope("data"):
             self.center_words = tf.placeholder(tf.int32, shape=[self.batch_size], name='center_words')
-            self.target_words = tf.placeholder(tf.int32, shape=[self.batch_size, 1], name='target_words')
+            self.target_words = tf.placeholder(tf.int32, shape=[self.batch_size, SKIP_WINDOW], name='target_words')
 
     def _create_embedding(self):
         """ Step 2: define weights. In word2vec, it's actually the weights that we care about """
         # Assemble this part of the graph on the CPU. You can change it to GPU if you have GPU
-        with tf.device('/cpu:0'):
+        with tf.device('/gpu:0'):
             with tf.name_scope("embed"):
                 self.embed_matrix = tf.Variable(tf.random_uniform([self.vocab_size, 
                                                                     self.embed_size], -1.0, 1.0), 
@@ -126,7 +126,7 @@ def train_model(model, batch_gen, num_train_steps, weights_fld):
         ####################
         # code to visualize the embeddings. uncomment the below to visualize embeddings
         # run "'tensorboard --logdir='processed'" to see the embeddings
-        # final_embed_matrix = sess.run(model.embed_matrix)
+        final_embed_matrix = sess.run(model.embed_matrix)
         
         # # it has to variable. constants don't work here. you can't reuse model.embed_matrix
         # embedding_var = tf.Variable(final_embed_matrix[:1000], name='embedding')
