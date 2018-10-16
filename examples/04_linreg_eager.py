@@ -72,7 +72,9 @@ def train(loss_fn):
         'become less noticeable. Eager execution is under active development: '
         'expect performance to increase substantially in the near future!')
 
-train(huber_loss)
+
+# train(squared_loss) # loss 28.4
+train(huber_loss)  # loss  7.5
 plt.plot(data[:,0], data[:,1], 'bo')
 # The `.numpy()` method of a tensor retrieves the NumPy array backing it.
 # In future versions of eager, you won't need to call `.numpy()` and will

@@ -30,15 +30,19 @@ train, val, test = utils.read_mnist(mnist_folder, flatten=True)
 # Step 2: Create datasets and iterator
 # create training Dataset and batch it
 train_data = tf.data.Dataset.from_tensor_slices(train)
-train_data = train_data.shuffle(10000) # if you want to shuffle your data
-train_data = train_data.batch(batch_size)
+train_data = train_data.shuffle(10000)  # 随机取出10000个
+train_data = train_data.batch(batch_size)  # 将数据分成以batch_size为大小的batch数组
 
 # create testing Dataset and batch it
 test_data = tf.data.Dataset.from_tensor_slices(test)
 test_data = test_data.batch(batch_size)
 
 # create one iterator and initialize it with different datasets
-iterator = tf.data.Iterator.from_structure(train_data.output_types, 
+print(train_data.output_types)  # (tf.float32, tf.float64)
+print(
+    train_data.output_shapes)  # (TensorShape([Dimension(None), Dimension(784)]), TensorShape([Dimension(None), Dimension(10)]))
+
+iterator = tf.data.Iterator.from_structure(train_data.output_types,
                                            train_data.output_shapes)
 img, label = iterator.get_next()
 
