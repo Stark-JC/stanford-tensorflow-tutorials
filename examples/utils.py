@@ -79,7 +79,7 @@ def download_mnist(path):
     expected_bytes = [9912422, 28881, 1648877, 4542]
 
     for filename, byte in zip(filenames, expected_bytes):
-        download_url = os.path.join(url, filename)
+        download_url = url + "/" + filename
         local_dest = os.path.join(path, filename)
         download_one_file(download_url, local_dest, byte, True)
 
