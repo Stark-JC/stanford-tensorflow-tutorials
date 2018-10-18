@@ -23,7 +23,7 @@ EMBED_SIZE = 128            # dimension of the word embedding vectors
 SKIP_WINDOW = 1             # the context window
 NUM_SAMPLED = 64            # number of negative examples to sample
 LEARNING_RATE = 1.0
-NUM_TRAIN_STEPS = 100000
+NUM_TRAIN_STEPS = 10000
 VISUAL_FLD = 'visualization'
 SKIP_STEP = 5000
 
@@ -135,7 +135,7 @@ class SkipGramModel:
         # create the list of num_variable most common words to visualize
         word2vec_utils.most_common_words(visual_fld, num_visualize)
 
-        saver = tf.train.Saver()
+        saver = tf.train.Saver()  # 保存session
         with tf.Session() as sess:
             sess.run(tf.global_variables_initializer())
             ckpt = tf.train.get_checkpoint_state(os.path.dirname('checkpoints/checkpoint'))

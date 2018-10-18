@@ -82,7 +82,7 @@ def word2vec(dataset):
                 if (index + 1) % SKIP_STEP == 0:
                     print('Average loss at step {}: {:5.1f}'.format(index, total_loss / SKIP_STEP))
                     total_loss = 0.0
-            except tf.errors.OutOfRangeError:
+            except tf.errors.OutOfRangeError:  # 数据集中遍历完后重新初始化一下迭代器
                 sess.run(iterator.initializer)
         writer.close()
 

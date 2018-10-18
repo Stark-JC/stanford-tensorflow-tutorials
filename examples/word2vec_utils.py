@@ -44,6 +44,8 @@ def convert_words_to_index(words, dictionary):
     """ Replace each word in the dataset with its index in the dictionary """
     return [dictionary[word] if word in dictionary else 0 for word in words]
 
+
+# 每次生成一个 center 一个target
 def generate_sample(index_words, context_window_size):
     """ Form training pairs according to the skip-gram model. """
     for index, center in enumerate(index_words):
@@ -66,6 +68,8 @@ def most_common_words(visual_fld, num_visualize):
         file.write(word)
     file.close()
 
+
+# 每次生成一个 (batch_size,)的中心词id的array, (batch_size,1)的context词id的array
 def batch_gen(download_url, expected_byte, vocab_size, batch_size, 
                 skip_window, visual_fld):
     local_dest = 'data/text8.zip'
