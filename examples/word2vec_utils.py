@@ -57,6 +57,8 @@ def generate_sample(index_words, context_window_size):
         for target in index_words[index + 1: index + context + 1]:
             yield center, target
 
+
+# 从词表里读取num_visualzie个词，并保存
 def most_common_words(visual_fld, num_visualize):
     """ create a list of num_visualize most frequent words to visualize on TensorBoard.
     saved to visualization/vocab_[num_visualize].tsv
