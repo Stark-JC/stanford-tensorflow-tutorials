@@ -16,6 +16,7 @@ import tensorflow as tf
 
 import utils
 
+# 7200 abstracts of Arvix papers about neural networks
 DATA_PATH = 'data/arvix_abstracts.txt'
 HIDDEN_SIZE = 200
 BATCH_SIZE = 64
@@ -59,7 +60,7 @@ def create_rnn(seq, hidden_size=HIDDEN_SIZE):
     return output, in_state, out_state
 
 def create_model(seq, temp, vocab, hidden=HIDDEN_SIZE):
-    seq = tf.one_hot(seq, len(vocab))
+    seq = tf.one_hot(seq, len(vocab))  # shape=(?,?,83)
     output, in_state, out_state = create_rnn(seq, hidden)
     # fully_connected is syntactic sugar for tf.matmul(w, output) + b
     # it will create w and b for us

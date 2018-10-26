@@ -79,7 +79,7 @@ with tf.variable_scope('conv2') as scope:
     conv2 = tf.nn.relu(conv + biases, name=scope.name)
 
     # output is of dimension BATCH_SIZE x 14 x 14 x 64
-    # layers.conv2d(images, 64, 5, 1, activation_fn=tf.nn.relu, padding='SAME')
+    # conv2 = layers.conv2d(conv1, 64, 5, 1, activation_fn=tf.nn.relu, padding='SAME')
 
 with tf.variable_scope('pool2') as scope:
     # similar to pool1
