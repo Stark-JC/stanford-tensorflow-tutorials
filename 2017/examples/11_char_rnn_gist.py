@@ -20,18 +20,24 @@ import utils
 DATA_PATH = 'data/arvix_abstracts.txt'
 HIDDEN_SIZE = 200
 BATCH_SIZE = 64
-NUM_STEPS = 50
+NUM_STEPS = 50  # RNN循环几次 X.shape[1]
 SKIP_STEP = 40
 TEMPRATURE = 0.7
 LR = 0.003
 LEN_GENERATED = 300
 
+
+# 字符串编码成数字数组
 def vocab_encode(text, vocab):
     return [vocab.index(x) + 1 for x in text if x in vocab]
 
+
+# 数字数组解码成字符串
 def vocab_decode(array, vocab):
     return ''.join([vocab[x - 1] for x in array])
 
+
+# 生成器，每次调用返回NUM_STEPS长，与之前的有一半重叠
 def read_data(filename, vocab, window=NUM_STEPS, overlap=NUM_STEPS//2):
     for text in open(filename):
         text = vocab_encode(text, vocab)
@@ -40,6 +46,8 @@ def read_data(filename, vocab, window=NUM_STEPS, overlap=NUM_STEPS//2):
             chunk += [0] * (window - len(chunk))
             yield chunk
 
+
+# 生成器，每次调用返回batch_size个训练数据
 def read_batch(stream, batch_size=BATCH_SIZE):
     batch = []
     for element in stream:
@@ -55,23 +63,40 @@ def create_rnn(seq, hidden_size=HIDDEN_SIZE):
             cell.zero_state(tf.shape(seq)[0], tf.float32), [None, hidden_size])
     # this line to calculate the real length of seq
     # all seq are padded to be of the same length which is NUM_STEPS
-    length = tf.reduce_sum(tf.reduce_max(tf.sign(seq), 2), 1)
+    length = tf.reduce_sum(tf.reduce_max(tf.sign(seq), 2), 1)  # (batchsize,)，每个句子的真实长度
     output, out_state = tf.nn.dynamic_rnn(cell, seq, length, in_state)
+    # output:[batch_size, NUM_STEPS, HIDDEN_SIZE], 每一时间的输出
+    # out_state: Final state, [batch_size, HIDDEN_SIZE]， 最后时间的输出，等价于output[-1]
     return output, in_state, out_state
 
 def create_model(seq, temp, vocab, hidden=HIDDEN_SIZE):
-    seq = tf.one_hot(seq, len(vocab))  # shape=(?,?,83)
+    seq = tf.one_hot(seq, len(vocab))  # shape=(?,?,83)，每个句子是一个矩阵(句子字符数，字符库数)
     output, in_state, out_state = create_rnn(seq, hidden)
     # fully_connected is syntactic sugar for tf.matmul(w, output) + b
     # it will create w and b for us
-    logits = tf.contrib.layers.fully_connected(output, len(vocab), None)
-    loss = tf.reduce_sum(tf.nn.softmax_cross_entropy_with_logits(logits=logits[:, :-1], labels=seq[:, 1:]))
+    logits = tf.contrib.layers.fully_connected(output, len(vocab),
+                                               None)  # None表示不激活，每一个时间的logits, [batch_size, NUM_STEPS, 83]
+    loss = tf.reduce_sum(
+        tf.nn.softmax_cross_entropy_with_logits(logits=logits[:, :-1], labels=seq[:, 1:]))  # y_hat:上一个时刻的输出; y:下一个时刻的输入
     # sample the next character from Maxwell-Boltzmann Distribution with temperature temp
     # it works equally well without tf.exp
-    sample = tf.multinomial(tf.exp(logits[:, -1] / temp), 1)[:, 0] 
+    sample = tf.multinomial(tf.exp(logits[:, -1] / temp), 1)[:, 0]  # 预测的下一个字符的结果
     return loss, sample, in_state, out_state
 
 def training(vocab, seq, loss, optimizer, global_step, temp, sample, in_state, out_state):
+    '''
+
+    :param vocab: token2id
+    :param seq: batch_size sentences
+    :param loss: loss of the batch
+    :param optimizer: ..
+    :param global_step: ..
+    :param temp: ..
+    :param sample: ths predicted next char at this time of the batch
+    :param in_state: ..
+    :param out_state: ..
+    :return:
+    '''
     saver = tf.train.Saver()
     start = time.time()
     with tf.Session() as sess:
