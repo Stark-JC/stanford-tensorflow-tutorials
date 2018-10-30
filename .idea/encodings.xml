@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/README.txt" charset="GB18030" />
+    <file url="file://$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/movie_conversations.txt" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/movie_lines.txt" charset="ISO-8859-1" />
+    <file url="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/vocab.dec" charset="ISO-8859-1" />
+  </component>
+</project>

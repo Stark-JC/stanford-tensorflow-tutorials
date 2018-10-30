@@ -14,8 +14,8 @@ This file contains the code to run the model.
 
 See readme.md for instruction on how to run the starter code.
 """
-from __future__ import division
-from __future__ import print_function
+from __future__ import division  # py3的 /
+from __future__ import print_function  # py3的print
 
 import argparse
 import os

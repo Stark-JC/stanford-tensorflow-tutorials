@@ -1,3 +1,4 @@
+# _*_ coding:utf-8 _*_
 """ A neural chatbot using sequence to sequence model with
 attentional decoder. 
 
@@ -25,12 +26,15 @@ import numpy as np
 
 import config
 
+
+# generate {lineid:line}
 def get_lines():
     id2line = {}
     file_path = os.path.join(config.DATA_PATH, config.LINE_FILE)
     with open(file_path, 'rb') as f:
         lines = f.readlines()
         for line in lines:
+            line = line.decode("iso-8859-1")
             parts = line.split(' +++$+++ ')
             if len(parts) == 5:
                 if parts[4][-1] == '\n':
@@ -38,13 +42,15 @@ def get_lines():
                 id2line[parts[0]] = parts[4]
     return id2line
 
+
+# generate [[lineid,lineid..]]
 def get_convos():
     """ Get conversations from the raw data """
     file_path = os.path.join(config.DATA_PATH, config.CONVO_FILE)
     convos = []
     with open(file_path, 'rb') as f:
         for line in f.readlines():
-            parts = line.split(' +++$+++ ')
+            parts = line.decode("iso-8859-1").split(' +++$+++ ')
             if len(parts) == 4:
                 convo = []
                 for line in parts[3][1:-2].split(', '):
@@ -53,6 +59,8 @@ def get_convos():
 
     return convos
 
+
+# same length of questions [] and answers [], as X and Y
 def question_answers(id2line, convos):
     """ Divide the dataset into two sets: questions and answers. """
     questions, answers = [], []
@@ -63,6 +71,8 @@ def question_answers(id2line, convos):
     assert len(questions) == len(answers)
     return questions, answers
 
+
+# split into train set, test set and save them
 def prepare_dataset(questions, answers):
     # create path to store all the train & test encoder & decoder
     make_dir(config.PROCESSED_PATH)
@@ -93,6 +103,8 @@ def make_dir(path):
     except OSError:
         pass
 
+
+# seperate a line into words only by predefined characters, try a better way?
 def basic_tokenizer(line, normalize_digits=True):
     """ A basic tokenizer to tokenize text into tokens.
     Feel free to change this to suit your need. """
@@ -101,39 +113,41 @@ def basic_tokenizer(line, normalize_digits=True):
     line = re.sub('\[', '', line)
     line = re.sub('\]', '', line)
     words = []
-    _WORD_SPLIT = re.compile(b"([.,!?\"'-<>:;)(])")
+    _WORD_SPLIT = re.compile(r"([.,!?\"'-<>:;)(])")
     _DIGIT_RE = re.compile(r"\d")
     for fragment in line.strip().lower().split():
         for token in re.split(_WORD_SPLIT, fragment):
             if not token:
                 continue
             if normalize_digits:
-                token = re.sub(_DIGIT_RE, b'#', token)
+                token = re.sub(_DIGIT_RE, '#', token)
             words.append(token)
     return words
 
+
+#
 def build_vocab(filename, normalize_digits=True):
     in_path = os.path.join(config.PROCESSED_PATH, filename)
     out_path = os.path.join(config.PROCESSED_PATH, 'vocab.{}'.format(filename[-3:]))
 
-    vocab = {}
-    with open(in_path, 'rb') as f:
+    vocab = {}  # {word:freq}
+    with open(in_path, 'r', encoding='iso-8859-1') as f:
         for line in f.readlines():
-            for token in basic_tokenizer(line):
+            for token in basic_tokenizer(line, normalize_digits):
                 if not token in vocab:
                     vocab[token] = 0
                 vocab[token] += 1
 
     sorted_vocab = sorted(vocab, key=vocab.get, reverse=True)
-    with open(out_path, 'wb') as f:
+    with open(out_path, 'w', encoding="iso-8859-1") as f:
         f.write('<pad>' + '\n')
         f.write('<unk>' + '\n')
         f.write('<s>' + '\n')
-        f.write('<\s>' + '\n') 
+        f.write('<\s>' + '\n')
         index = 4
         for word in sorted_vocab:
             if vocab[word] < config.THRESHOLD:
-                with open('config.py', 'ab') as cf:
+                with open('config.py', 'a', encoding="utf-8") as cf:
                     if filename[-3:] == 'enc':
                         cf.write('ENC_VOCAB = ' + str(index) + '\n')
                     else:
@@ -143,7 +157,7 @@ def build_vocab(filename, normalize_digits=True):
             index += 1
 
 def load_vocab(vocab_path):
-    with open(vocab_path, 'rb') as f:
+    with open(vocab_path, 'r', encoding="iso-8859-1") as f:
         words = f.read().splitlines()
     return words, {words[i]: i for i in range(len(words))}
 
@@ -158,8 +172,8 @@ def token2id(data, mode):
     out_path = data + '_ids.' + mode
 
     _, vocab = load_vocab(os.path.join(config.PROCESSED_PATH, vocab_path))
-    in_file = open(os.path.join(config.PROCESSED_PATH, in_path), 'rb')
-    out_file = open(os.path.join(config.PROCESSED_PATH, out_path), 'wb')
+    in_file = open(os.path.join(config.PROCESSED_PATH, in_path), 'r', encoding="iso-8859-1")
+    out_file = open(os.path.join(config.PROCESSED_PATH, out_path), 'w', encoding="iso-8859-1")
     
     lines = in_file.read().splitlines()
     for line in lines:
@@ -190,8 +204,8 @@ def process_data():
     token2id('test', 'dec')
 
 def load_data(enc_filename, dec_filename, max_training_size=None):
-    encode_file = open(os.path.join(config.PROCESSED_PATH, enc_filename), 'rb')
-    decode_file = open(os.path.join(config.PROCESSED_PATH, dec_filename), 'rb')
+    encode_file = open(os.path.join(config.PROCESSED_PATH, enc_filename), 'r')
+    decode_file = open(os.path.join(config.PROCESSED_PATH, dec_filename), 'r')
     encode, decode = encode_file.readline(), decode_file.readline()
     data_buckets = [[] for _ in config.BUCKETS]
     i = 0
