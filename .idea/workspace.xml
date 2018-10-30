@@ -1,14 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/examples/04_word2vec_eager_starter.py" line="47" />
-  </component>
   <component name="ChangeListManager">
     <list default="true" id="79816f39-9d88-4883-b56e-7331bb937ec5" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/stanford-tensorflow-tutorials.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/stanford-tensorflow-tutorials.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/config.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/data.py" afterDir="false" />
     </list>
@@ -22,10 +16,11 @@
     <session id="1680875496">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="11" />
+          <entry key="project.closed" value="12" />
           <entry key="project.open.time.0" value="1" />
           <entry key="project.open.time.1" value="4" />
           <entry key="project.open.time.11" value="2" />
+          <entry key="project.open.time.13" value="1" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.3" value="1" />
           <entry key="project.open.time.4" value="2" />
@@ -34,17 +29,18 @@
           <entry key="project.open.time.7" value="1" />
           <entry key="project.open.time.8" value="4" />
           <entry key="project.open.time.9" value="1" />
-          <entry key="project.opened" value="21" />
+          <entry key="project.opened" value="22" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="csv" value="1" />
-          <entry key="dec" value="7" />
-          <entry key="enc" value="4" />
+          <entry key="dec" value="11" />
+          <entry key="enc" value="8" />
           <entry key="md" value="5" />
           <entry key="png" value="4" />
-          <entry key="py" value="129" />
+          <entry key="py" value="132" />
+          <entry key="pyi" value="1" />
           <entry key="tsv" value="4" />
           <entry key="txt" value="30" />
         </counts>
@@ -53,21 +49,22 @@
         <counts>
           <entry key="Image" value="4" />
           <entry key="Markdown" value="5" />
-          <entry key="PLAIN_TEXT" value="46" />
-          <entry key="Python" value="129" />
+          <entry key="PLAIN_TEXT" value="54" />
+          <entry key="Python" value="132" />
+          <entry key="PythonStub" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="255" />
           <entry key="dummy" value="6" />
-          <entry key="py" value="4802" />
+          <entry key="py" value="4986" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="6" />
-          <entry key="Python" value="5057" />
+          <entry key="Python" value="5241" />
         </counts>
       </usages-collector>
     </session>
@@ -77,29 +74,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
-              <caret line="29" column="30" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="30" />
-              <folding>
-                <element signature="e#506#546#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="137" selection-start-line="137" selection-end-line="137" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="346">
-              <caret line="60" selection-start-line="60" selection-end-line="61" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
+            <state relative-caret-position="232">
+              <caret line="71" column="57" lean-forward="true" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
               <folding>
                 <element signature="e#507#544#0" expanded="true" />
               </folding>
@@ -107,23 +92,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="508">
-              <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
-              <folding>
-                <element signature="e#551#588#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="367">
+              <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
+        <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="460">
-              <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+            <state relative-caret-position="34">
+              <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -143,6 +125,8 @@
       <find>&lt;u&gt;</find>
       <find>wb</find>
       <find>L19462</find>
+      <find>2219</find>
+      <find>load_data</find>
     </findStrings>
     <replaceStrings>
       <replace>r</replace>
@@ -181,14 +165,15 @@
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" />
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/config.py" />
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/data.py" />
+        <option value="$PROJECT_DIR$/2017/assignments/chatbot/model.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="314" />
-    <option name="y" value="85" />
-    <option name="width" value="1140" />
-    <option name="height" value="955" />
+    <option name="x" value="37" />
+    <option name="y" value="198" />
+    <option name="width" value="1369" />
+    <option name="height" value="940" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -279,28 +264,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.data">
-    <configuration name="07_convnet_mnist_starter" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="stanford-tensorflow-tutorials" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2017/examples" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.chatbot">
     <configuration name="09_queue_example" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -364,6 +328,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="chatbot" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="stanford-tensorflow-tutorials" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/2017/assignments/chatbot" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -386,19 +371,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.07_convnet_mnist_starter" />
       <item itemvalue="Python.09_tfrecord_example" />
       <item itemvalue="Python.09_queue_example" />
       <item itemvalue="Python.11_char_rnn_gist" />
       <item itemvalue="Python.data" />
+      <item itemvalue="Python.chatbot" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.chatbot" />
         <item itemvalue="Python.data" />
         <item itemvalue="Python.11_char_rnn_gist" />
         <item itemvalue="Python.09_queue_example" />
         <item itemvalue="Python.09_tfrecord_example" />
-        <item itemvalue="Python.07_convnet_mnist_starter" />
       </list>
     </recent_temporary>
   </component>
@@ -483,7 +468,14 @@
       <option name="project" value="LOCAL" />
       <updated>1540805837874</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="reformat">
+      <created>1540886117339</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1540886117339</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TodoView" selected-index="1">
@@ -496,10 +488,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="314" y="85" width="1140" height="955" extended-state="0" />
+    <frame x="146" y="583" width="1369" height="940" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.27041742" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22025129" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Project Explorer" order="2" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -507,15 +499,15 @@
       <window_info id="Job Explorer" order="5" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.22560975" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.44390243" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.22560975" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49822065" visible="true" weight="0.40386942" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" weight="0.28627968" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017794" side_tool="true" weight="0.44299287" />
       <window_info anchor="bottom" id="Version Control" order="11" weight="0.21598002" />
       <window_info anchor="bottom" id="Messages" order="12" />
       <window_info anchor="bottom" id="Python Console" order="13" weight="0.28848484" />
@@ -597,16 +589,20 @@
           <line>12</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2017/assignments/chatbot/data.py</url>
+          <line>276</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py</url>
+          <line>94</line>
+          <option name="timeStamp" value="11" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2017/examples/autoencoder/layer_utils.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2017/examples/03_linear_regression_sol.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/examples/03_linreg_starter.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -642,10 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1501">
           <caret line="79" column="48" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
-          <folding>
-            <marker date="1539827968180" expanded="true" signature="2421:2530" ph="..." />
-            <marker date="1539827968180" expanded="true" signature="3882:3884" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -810,20 +802,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train.enc">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://C:/Program Files/anaconda/Lib/re.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="211" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train.dec">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3247784">
-          <caret line="170936" column="67" selection-start-line="170936" selection-start-column="67" selection-end-line="170936" selection-end-column="67" />
         </state>
       </provider>
     </entry>
@@ -863,54 +845,70 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/vocab.enc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-463581" />
+        <state relative-caret-position="-2337" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train.enc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train.dec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="460">
-          <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+        <state relative-caret-position="107">
+          <caret line="170936" column="29" selection-start-line="170936" selection-start-column="29" selection-end-line="170936" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py">
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train_ids.enc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="29" column="30" selection-start-line="29" selection-start-column="18" selection-end-line="29" selection-end-column="30" />
-          <folding>
-            <element signature="e#506#546#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="346">
-          <caret line="60" selection-start-line="60" selection-end-line="61" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/model.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="15" column="3" selection-start-line="15" selection-start-column="3" selection-end-line="15" selection-end-column="3" />
-          <folding>
-            <element signature="e#507#544#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="152">
+          <caret line="8" selection-start-line="8" selection-end-line="8" selection-end-column="43" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/train_ids.dec">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-114" />
+        <state relative-caret-position="114">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="443">
+          <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="137" selection-start-line="137" selection-end-line="137" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="32" selection-start-line="32" selection-end-line="32" selection-end-column="20" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/data.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="508">
-          <caret line="189" lean-forward="true" selection-start-line="189" selection-end-line="189" />
+        <state relative-caret-position="367">
+          <caret line="85" column="16" selection-start-line="85" selection-start-column="16" selection-end-line="85" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/model.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="71" column="57" lean-forward="true" selection-start-line="71" selection-start-column="57" selection-end-line="71" selection-end-column="57" />
           <folding>
-            <element signature="e#551#588#0" expanded="true" />
+            <element signature="e#507#544#0" expanded="true" />
           </folding>
         </state>
       </provider>

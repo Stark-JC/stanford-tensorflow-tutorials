@@ -177,7 +177,7 @@ def token2id(data, mode):
     
     lines = in_file.read().splitlines()
     for line in lines:
-        if mode == 'dec': # we only care about '<s>' and </s> in encoder
+        if mode == 'dec':  # we only care about '<s>' and </s> in decoder
             ids = [vocab['<s>']]
         else:
             ids = []
@@ -203,9 +203,11 @@ def process_data():
     token2id('test', 'enc')
     token2id('test', 'dec')
 
+
+# load data to buckets
 def load_data(enc_filename, dec_filename, max_training_size=None):
-    encode_file = open(os.path.join(config.PROCESSED_PATH, enc_filename), 'r')
-    decode_file = open(os.path.join(config.PROCESSED_PATH, dec_filename), 'r')
+    encode_file = open(os.path.join(config.PROCESSED_PATH, enc_filename), 'r', encoding="iso-8859-1")
+    decode_file = open(os.path.join(config.PROCESSED_PATH, dec_filename), 'r', encoding="iso-8859-1")
     encode, decode = encode_file.readline(), decode_file.readline()
     data_buckets = [[] for _ in config.BUCKETS]
     i = 0
@@ -225,6 +227,8 @@ def load_data(enc_filename, dec_filename, max_training_size=None):
 def _pad_input(input_, size):
     return input_ + [config.PAD_ID] * (size - len(input_))
 
+
+# list (batch_size, size) ==> nparray (size, batch_size)
 def _reshape_batch(inputs, size, batch_size):
     """ Create batch-major inputs. Batch inputs are just re-indexed inputs
     """
@@ -243,7 +247,7 @@ def get_batch(data_bucket, bucket_id, batch_size=1):
 
     for _ in range(batch_size):
         encoder_input, decoder_input = random.choice(data_bucket)
-        # pad both encoder and decoder, reverse the encoder
+        # pad both encoder and decoder to the largest size, reverse the encoder
         encoder_inputs.append(list(reversed(_pad_input(encoder_input, encoder_size))))
         decoder_inputs.append(_pad_input(decoder_input, decoder_size))
 
@@ -266,5 +270,10 @@ def get_batch(data_bucket, bucket_id, batch_size=1):
     return batch_encoder_inputs, batch_decoder_inputs, batch_masks
 
 if __name__ == '__main__':
-    prepare_raw_data()
-    process_data()
+    # prepare_raw_data()
+    # process_data()
+    train = load_data('train_ids.enc', 'train_ids.dec')
+    batch = get_batch(train[0],
+                      0,
+                      batch_size=config.BATCH_SIZE)
+    print("s")

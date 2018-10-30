@@ -65,6 +65,8 @@ class ChatBotModel(object):
     def _create_loss(self):
         print('Creating loss... \nIt might take a couple of minutes depending on how many buckets you have.')
         start = time.time()
+
+        # https://tensorflow.google.cn/api_docs/python/tf/contrib/legacy_seq2seq/embedding_attention_seq2seq
         def _seq2seq_f(encoder_inputs, decoder_inputs, do_decode):
             return tf.nn.seq2seq.embedding_attention_seq2seq(
                     encoder_inputs, decoder_inputs, self.cell,
