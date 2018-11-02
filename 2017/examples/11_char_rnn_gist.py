@@ -64,7 +64,7 @@ def create_rnn(seq, hidden_size=HIDDEN_SIZE):
     # this line to calculate the real length of seq
     # all seq are padded to be of the same length which is NUM_STEPS
     length = tf.reduce_sum(tf.reduce_max(tf.sign(seq), 2), 1)  # (batchsize,)，每个句子的真实长度
-    output, out_state = tf.nn.dynamic_rnn(cell, seq, length, in_state)
+    output, out_state = tf.nn.dynamic_rnn(cell, seq, length, in_state)  # 动态rnn可以直接自动执行每一个时刻
     # output:[batch_size, NUM_STEPS, HIDDEN_SIZE], 每一时间的输出
     # out_state: Final state, [batch_size, HIDDEN_SIZE]， 最后时间的输出，等价于output[-1]
     return output, in_state, out_state

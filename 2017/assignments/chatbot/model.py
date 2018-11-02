@@ -25,7 +25,7 @@ import config
 
 class ChatBotModel(object):
     def __init__(self, forward_only, batch_size):
-        """forward_only: if set, we do not construct the backward pass in the model.
+        """forward_only: if set, we do not construct the backward pass in the model. (for predict.)
         """
         print('Initialize new model')
         self.fw_only = forward_only
@@ -35,13 +35,14 @@ class ChatBotModel(object):
         # Feeds for inputs. It's a list of placeholders
         print('Create placeholders')
         self.encoder_inputs = [tf.placeholder(tf.int32, shape=[None], name='encoder{}'.format(i))
-                               for i in range(config.BUCKETS[-1][0])]
+                               for i in range(config.BUCKETS[-1][0])]  # (max_size of encoder_inputs, batch_size)
         self.decoder_inputs = [tf.placeholder(tf.int32, shape=[None], name='decoder{}'.format(i))
-                               for i in range(config.BUCKETS[-1][1] + 1)]
+                               for i in
+                               range(config.BUCKETS[-1][1] + 1)]  # (max_size of decoder_inputs + 1(go?), batch_size)
         self.decoder_masks = [tf.placeholder(tf.float32, shape=[None], name='mask{}'.format(i))
                               for i in range(config.BUCKETS[-1][1] + 1)]
 
-        # Our targets are decoder inputs shifted by one (to ignore <s> symbol)
+        # Our targets are decoder inputs shifted by one
         self.targets = self.decoder_inputs[1:]
         
     def _inference(self):
@@ -53,11 +54,16 @@ class ChatBotModel(object):
             b = tf.get_variable('proj_b', [config.DEC_VOCAB])
             self.output_projection = (w, b)
 
-        def sampled_loss(inputs, labels):
+        def sampled_loss(logits, labels):
             labels = tf.reshape(labels, [-1, 1])
-            return tf.nn.sampled_softmax_loss(tf.transpose(w), b, inputs, labels, 
-                                              config.NUM_SAMPLES, config.DEC_VOCAB)
+            return tf.nn.sampled_softmax_loss(weights=tf.transpose(w),
+                                              biases=b,
+                                              inputs=logits,
+                                              labels=labels,
+                                              num_sampled=config.NUM_SAMPLES,
+                                              num_classes=config.DEC_VOCAB)
         self.softmax_loss_function = sampled_loss
+        # self.softmax_loss_function = tf.nn.sparse_softmax_cross_entropy_with_logits
 
         single_cell = tf.nn.rnn_cell.GRUCell(config.HIDDEN_SIZE)
         self.cell = tf.nn.rnn_cell.MultiRNNCell([single_cell] * config.NUM_LAYERS)
@@ -66,9 +72,17 @@ class ChatBotModel(object):
         print('Creating loss... \nIt might take a couple of minutes depending on how many buckets you have.')
         start = time.time()
 
-        # https://tensorflow.google.cn/api_docs/python/tf/contrib/legacy_seq2seq/embedding_attention_seq2seq
         def _seq2seq_f(encoder_inputs, decoder_inputs, do_decode):
-            return tf.nn.seq2seq.embedding_attention_seq2seq(
+            '''
+
+            :param encoder_inputs: A list of 1D int32 Tensors of shape [batch_size],  list size is encoder_size
+            :param decoder_inputs: A list of 1D int32 Tensors of shape [batch_size].
+            :param do_decode: Boolean or scalar Boolean Tensor; if True, only the first of decoder_inputs will be used (the "GO" symbol), and all other decoder inputs will be taken from previous outputs (as in embedding_rnn_decoder). If False, decoder_inputs are used as given (the standard decoder case).
+            :return: seq2seq model
+            '''
+            setattr(tf.contrib.rnn.GRUCell, '__deepcopy__', lambda self, _: self)
+            setattr(tf.contrib.rnn.MultiRNNCell, '__deepcopy__', lambda self, _: self)
+            return tf.contrib.legacy_seq2seq.embedding_attention_seq2seq(
                     encoder_inputs, decoder_inputs, self.cell,
                     num_encoder_symbols=config.ENC_VOCAB,
                     num_decoder_symbols=config.DEC_VOCAB,
@@ -77,7 +91,10 @@ class ChatBotModel(object):
                     feed_previous=do_decode)
 
         if self.fw_only:
-            self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            # outputs:  The outputs for each bucket. Its j'th element consists of a list of 2D Tensors (batch_size, hidden_size).
+            #           The shape of output tensors can be either [batch_size x output_size] or [batch_size x num_decoder_symbols] depending on the seq2seq model used;
+            # losses: List of scalar Tensors, representing losses for each bucket, or, if per_example_loss is set, a list of 1D batch-sized float Tensors.
+            self.outputs, self.losses = tf.contrib.legacy_seq2seq.model_with_buckets(
                                         self.encoder_inputs, 
                                         self.decoder_inputs, 
                                         self.targets,
@@ -92,7 +109,7 @@ class ChatBotModel(object):
                                             self.output_projection[0]) + self.output_projection[1]
                                             for output in self.outputs[bucket]]
         else:
-            self.outputs, self.losses = tf.nn.seq2seq.model_with_buckets(
+            self.outputs, self.losses = tf.contrib.legacy_seq2seq.model_with_buckets(
                                         self.encoder_inputs, 
                                         self.decoder_inputs, 
                                         self.targets,
@@ -114,7 +131,7 @@ class ChatBotModel(object):
                 self.train_ops = []
                 start = time.time()
                 for bucket in range(len(config.BUCKETS)):
-                    
+                    # norm: A 0-D (scalar) Tensor representing the global norm.
                     clipped_grads, norm = tf.clip_by_global_norm(tf.gradients(self.losses[bucket], 
                                                                  trainables),
                                                                  config.MAX_GRAD_NORM)

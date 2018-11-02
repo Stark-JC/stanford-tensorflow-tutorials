@@ -77,7 +77,7 @@ In all files the field separator is " +++$+++ "
 		- characterID of the second character involved in the conversation
 		- movieID of the movie in which the conversation occurred
 		- list of the utterances that make the conversation, in chronological 
-			order: ['lineID1','lineID2',�,'lineIDN']
+			order: ['lineID1','lineID2',..,'lineIDN']
 			has to be matched with movie_lines.txt to reconstruct the actual content
 
 - raw_script_urls.txt

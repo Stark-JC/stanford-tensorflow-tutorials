@@ -61,7 +61,7 @@ def run_step(sess, model, encoder_inputs, decoder_inputs, decoder_masks, bucket_
     # input feed: encoder inputs, decoder inputs, target_weights, as provided.
     input_feed = {}
     for step in range(encoder_size):
-        input_feed[model.encoder_inputs[step].name] = encoder_inputs[step]
+        input_feed[model.encoder_inputs[step].name] = encoder_inputs[step]  # take out each step from encoder_inputs
     for step in range(decoder_size):
         input_feed[model.decoder_inputs[step].name] = decoder_inputs[step]
         input_feed[model.decoder_masks[step].name] = decoder_masks[step]

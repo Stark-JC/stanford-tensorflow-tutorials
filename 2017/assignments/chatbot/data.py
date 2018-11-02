@@ -240,7 +240,15 @@ def _reshape_batch(inputs, size, batch_size):
 
 
 def get_batch(data_bucket, bucket_id, batch_size=1):
-    """ Return one batch to feed into the model """
+    """ Return one batch to feed into the model, time-major format, each row of them represents an feed to the model
+        batch_encoder_inputs: the padded inputs of encoder with ids in reverse (encoder_size, batch_size);
+                            encoder_size = max_encoder_time;
+        batch_decoder_inputs: the padded inputs of decoder with ids,(decoder_size, batch_size);
+                            column [2,..,3] or [2,..3,0,..,0] (0: padding; 2: begin; 3: end);
+                            decoder_size = max_decoder_time
+
+        batch_masks: same size as batch_decoder_inputs with value 0 or 1
+    """
     # only pad to the max length of the bucket
     encoder_size, decoder_size = config.BUCKETS[bucket_id]
     encoder_inputs, decoder_inputs = [], []
