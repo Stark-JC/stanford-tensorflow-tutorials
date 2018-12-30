@@ -15,7 +15,7 @@ import time
 
 import tensorflow as tf
 from tensorflow.examples.tutorials.mnist import input_data
-
+from tensorflow.python import debug as tfdbg
 import utils
 
 N_CLASSES = 10
@@ -140,6 +140,7 @@ optimizer = tf.train.AdamOptimizer(learning_rate=LEARNING_RATE).minimize(loss, g
 # 不同的优化器开始相差很多..
 
 with tf.Session() as sess:
+    sess = tfdbg.LocalCLIDebugWrapperSession(sess)
     sess.run(tf.global_variables_initializer())
     saver = tf.train.Saver()
     # to visualize using TensorBoard

@@ -2,19 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="79816f39-9d88-4883-b56e-7331bb937ec5" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/config.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/README.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/README.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/data.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/assignments/chatbot/model.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/assignments/chatbot/model.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" beforeDir="false" afterPath="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/demo_eager.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/demo_equal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/other/demo_grad.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="CoverageDataManager">
+    <SUITE FILE_PATH="coverage/stanford_tensorflow_tutorials$07_convnet_mnist_starter.coverage" NAME="07_convnet_mnist_starter Coverage Results" MODIFIED="1545478789630" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/2017/examples" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="1680875496">
@@ -76,10 +79,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="model.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/model.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
+            <state relative-caret-position="2356">
               <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
               <folding>
                 <element signature="e#507#544#0" expanded="true" />
@@ -88,52 +91,48 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn_cell_impl.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="473" column="2" selection-start-line="473" selection-start-column="2" selection-end-line="473" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/contrib/legacy_seq2seq/python/ops/seq2seq.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="360">
-              <caret line="1033" column="28" selection-start-line="1033" selection-start-column="28" selection-end-line="1033" selection-end-column="28" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
+      <file leaf-file-name="11_char_rnn_gist.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="60" column="33" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="33" />
+            <state relative-caret-position="627">
+              <caret line="33" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="33" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn.py">
+      <file leaf-file-name="07_convnet_mnist.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1437">
-              <caret line="1284" column="40" selection-start-line="1284" selection-start-column="40" selection-end-line="1284" selection-end-column="56" />
+            <state relative-caret-position="3135">
+              <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="07_convnet_mnist_starter.py" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="76">
+              <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="03_logistic_regression_mnist_sol.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/2017/examples/03_logistic_regression_mnist_sol.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="config.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
+            <state relative-caret-position="950">
               <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="README.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/README.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1368">
@@ -142,10 +141,10 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file leaf-file-name="chatbot.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="247">
+            <state relative-caret-position="2223">
               <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
             </state>
           </provider>
@@ -210,7 +209,6 @@
         <option value="$PROJECT_DIR$/examples/SkipGram.py" />
         <option value="$PROJECT_DIR$/examples/04_word2vec_visualize.py" />
         <option value="$PROJECT_DIR$/examples/word2vec_utils.py" />
-        <option value="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" />
         <option value="$PROJECT_DIR$/2017/examples/data/heart.csv" />
         <option value="$PROJECT_DIR$/2017/examples/07_convnet_mnist.py" />
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/data.py" />
@@ -219,14 +217,24 @@
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" />
         <option value="$PROJECT_DIR$/2017/assignments/chatbot/config.py" />
         <option value="$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py" />
+        <option value="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="308" />
-    <option name="y" value="281" />
-    <option name="width" value="1248" />
-    <option name="height" value="968" />
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="NodePackageJsonFileManager">
+    <packageJsonPaths />
+  </component>
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="166" />
+    <option name="y" value="34" />
+    <option name="width" value="996" />
+    <option name="height" value="753" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -240,30 +248,6 @@
               <item name="stanford-tensorflow-tutorials" type="b2602c69:ProjectViewProjectNode" />
               <item name="stanford-tensorflow-tutorials" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="stanford-tensorflow-tutorials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stanford-tensorflow-tutorials" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stanford-tensorflow-tutorials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stanford-tensorflow-tutorials" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="assignments" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stanford-tensorflow-tutorials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stanford-tensorflow-tutorials" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="assignments" type="462c0819:PsiDirectoryNode" />
-              <item name="chatbot" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="stanford-tensorflow-tutorials" type="b2602c69:ProjectViewProjectNode" />
-              <item name="stanford-tensorflow-tutorials" type="462c0819:PsiDirectoryNode" />
-              <item name="2017" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -272,8 +256,9 @@
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="D:/迅雷下载/CS224n Natural Language Processing with Deep Learning/github_assignments" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.project" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -295,8 +280,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.chatbot">
-    <configuration name="11_char_rnn_gist" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.07_convnet_mnist_starter">
+    <configuration name="07_convnet_mnist_starter" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -308,14 +293,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="chatbot (1)" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
@@ -329,14 +312,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/assignments/chatbot/chatbot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="chatbot" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
@@ -350,14 +331,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="data" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
@@ -371,14 +350,12 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/assignments/chatbot/data.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <configuration name="model" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="stanford-tensorflow-tutorials" />
@@ -392,29 +369,27 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/2017/assignments/chatbot/model.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.11_char_rnn_gist" />
       <item itemvalue="Python.data" />
       <item itemvalue="Python.chatbot" />
       <item itemvalue="Python.chatbot (1)" />
       <item itemvalue="Python.model" />
+      <item itemvalue="Python.07_convnet_mnist_starter" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.07_convnet_mnist_starter" />
         <item itemvalue="Python.chatbot" />
         <item itemvalue="Python.model" />
         <item itemvalue="Python.chatbot (1)" />
         <item itemvalue="Python.data" />
-        <item itemvalue="Python.11_char_rnn_gist" />
       </list>
     </recent_temporary>
   </component>
@@ -526,57 +501,64 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="680" y="573" width="1248" height="968" extended-state="0" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5809179" visible="true" weight="0.36446282" />
-      <window_info id="Structure" order="1" sideWeight="0.41908213" side_tool="true" visible="true" weight="0.36446282" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="Job Explorer" order="5" sideWeight="0.4988864" weight="0.3298272" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.006002401" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49822065" weight="0.51096493" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017794" side_tool="true" weight="0.44299287" />
+      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.21598002" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.2872807" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.19224806" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28627968" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.5782946" visible="true" weight="0.30484116" />
+      <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info id="Structure" order="1" sideWeight="0.42170542" side_tool="true" visible="true" weight="0.30484116" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.49822065" weight="0.51096493" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.28627968" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.5017794" side_tool="true" weight="0.44299287" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.21598002" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.2872807" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="DB Browser" order="4" />
+      <window_info id="Project Explorer" order="2" />
+      <window_info id="Job Explorer" order="5" sideWeight="0.4988864" weight="0.3298272" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Find" order="1" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24184783" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info id="Project Explorer" order="2" />
-      <window_info id="Favorites" order="3" side_tool="true" />
-      <window_info id="DB Browser" order="4" />
-      <window_info id="Job Explorer" order="5" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.39313984" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39841688" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
       <window_info anchor="bottom" id="Console" order="7" />
       <window_info anchor="bottom" id="DB Execution Console" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32957393" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Version Control" order="11" weight="0.21598002" />
-      <window_info anchor="bottom" id="Messages" order="12" />
-      <window_info anchor="bottom" id="Python Console" order="13" weight="0.28963795" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info id="Project Explorer" order="2" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24184783" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32958803" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.39313984" />
+      <window_info id="DB Browser" order="4" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Job Explorer" order="5" />
+      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39841688" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32957393" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="11" weight="0.21598002" />
+      <window_info id="Favorites" order="3" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Messages" order="12" />
+      <window_info anchor="bottom" id="Python Console" order="13" weight="0.28963795" />
     </layout-to-restore>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -630,27 +612,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/2017/examples/09_queue_example.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="741">
-          <caret line="39" column="14" selection-start-line="39" selection-start-column="14" selection-end-line="39" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2017/examples/04_word2vec_visualize.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="703">
-          <caret line="41" column="12" selection-start-line="41" selection-start-column="12" selection-end-line="41" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/examples/04_linreg_eager_starter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="18" selection-start-line="18" selection-end-line="18" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/2017/examples/04_word2vec_starter.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="358">
@@ -696,27 +657,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/variable_scope.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1435" column="4" selection-start-line="1435" selection-start-column="4" selection-end-line="1435" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/re.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="211" selection-start-line="211" selection-end-line="211" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/codecs.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="320" selection-start-line="320" selection-end-line="320" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/variable_scope.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/re.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/codecs.py" />
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/processed/vocab.enc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2337" />
@@ -729,47 +672,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="443">
-          <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_HOME_DIR$/helpers/typeshed/stdlib/2and3/argparse.pyi">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/copy.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="158" column="53" lean-forward="true" selection-start-line="158" selection-start-column="53" selection-end-line="158" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/copy.py" />
     <entry file="file://$PROJECT_DIR$/assignments/chatbot/model.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1060">
           <caret line="44" column="75" lean-forward="true" selection-start-line="38" selection-start-column="12" selection-end-line="44" selection-end-column="75" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/gen_math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="4455" selection-start-line="4455" selection-end-line="4455" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/framework/op_def_library.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="144">
-          <caret line="545" selection-start-line="545" selection-end-line="545" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/gen_math_ops.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/framework/op_def_library.py" />
     <entry file="file://$PROJECT_DIR$/assignments/chatbot/chatbot.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="4462">
@@ -846,27 +761,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="36">
-          <caret line="585" column="13" lean-forward="true" selection-start-line="585" selection-start-column="13" selection-end-line="585" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/nn_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="599">
-          <caret line="1995" column="28" lean-forward="true" selection-start-line="1994" selection-start-column="19" selection-end-line="1995" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/math_ops.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="411">
-          <caret line="2106" column="10" selection-start-line="2106" selection-start-column="4" selection-end-line="2106" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/__init__.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/nn_ops.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/math_ops.py" />
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/cornell movie-dialogs corpus/README.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1368">
@@ -883,62 +780,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/chatbot.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
+        <state relative-caret-position="2223">
           <caret line="121" column="12" selection-start-line="121" selection-start-column="12" selection-end-line="121" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/config.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
+        <state relative-caret-position="950">
           <caret line="50" column="15" selection-start-line="50" selection-start-column="15" selection-end-line="50" selection-end-column="15" />
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/nn_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="1308" column="20" selection-start-line="1308" selection-start-column="20" selection-end-line="1308" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/framework/tensor_shape.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/pkgs/tensorflow-base-1.10.0-eigen_py36h45df0d8_0/Lib/site-packages/tensorflow/contrib/eager/python/examples/rnn_ptb/rnn_ptb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="126" column="20" selection-start-line="126" selection-start-column="17" selection-end-line="126" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/pkgs/tensorflow-base-1.10.0-gpu_py36h6e53903_0/Lib/site-packages/tensorflow/contrib/eager/python/examples/rnn_ptb/rnn_ptb.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="335">
-          <caret line="53" column="36" selection-start-line="53" selection-start-column="23" selection-end-line="53" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/nn/rnn_cell/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/contrib/rnn/python/ops/core_rnn_cell.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="533">
-          <caret line="359" column="35" selection-start-line="359" selection-start-column="24" selection-end-line="359" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-2135057352/builtins.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="666">
-          <caret line="5246" column="8" selection-start-line="5246" selection-start-column="8" selection-end-line="5246" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/nn_impl.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/framework/tensor_shape.py" />
+    <entry file="file://C:/Program Files/anaconda/pkgs/tensorflow-base-1.10.0-eigen_py36h45df0d8_0/Lib/site-packages/tensorflow/contrib/eager/python/examples/rnn_ptb/rnn_ptb.py" />
+    <entry file="file://C:/Program Files/anaconda/pkgs/tensorflow-base-1.10.0-gpu_py36h6e53903_0/Lib/site-packages/tensorflow/contrib/eager/python/examples/rnn_ptb/rnn_ptb.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/nn/rnn_cell/__init__.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/contrib/rnn/python/ops/core_rnn_cell.py" />
+    <entry file="file://$USER_HOME$/.PyCharmCE2018.2/system/python_stubs/-2135057352/builtins.py" />
     <entry file="file://$PROJECT_DIR$/2017/assignments/chatbot/model.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
+        <state relative-caret-position="2356">
           <caret line="131" column="23" selection-start-line="131" selection-start-column="23" selection-end-line="131" selection-end-column="23" />
           <folding>
             <element signature="e#507#544#0" expanded="true" />
@@ -946,31 +809,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1437">
-          <caret line="1284" column="40" selection-start-line="1284" selection-start-column="40" selection-end-line="1284" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn_cell_impl.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="473" column="2" selection-start-line="473" selection-start-column="2" selection-end-line="473" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/contrib/legacy_seq2seq/python/ops/seq2seq.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="1033" column="28" selection-start-line="1033" selection-start-column="28" selection-end-line="1033" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/python/ops/rnn_cell_impl.py" />
+    <entry file="file://C:/Program Files/anaconda/Lib/site-packages/tensorflow/contrib/legacy_seq2seq/python/ops/seq2seq.py" />
     <entry file="file://$PROJECT_DIR$/2017/examples/11_char_rnn_gist.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="570">
-          <caret line="60" column="33" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="33" />
+        <state relative-caret-position="627">
+          <caret line="33" selection-start-line="60" selection-start-column="26" selection-end-line="60" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/examples/03_logistic_regression_mnist_starter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-38">
+          <caret line="34" column="34" selection-start-line="34" selection-start-column="34" selection-end-line="34" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/examples/03_logistic_regression_mnist_sol.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3135">
+          <caret line="169" column="27" selection-start-line="169" selection-start-column="27" selection-end-line="169" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2017/examples/07_convnet_mnist_starter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="50" column="27" selection-start-line="50" selection-start-column="27" selection-end-line="50" selection-end-column="27" />
         </state>
       </provider>
     </entry>
