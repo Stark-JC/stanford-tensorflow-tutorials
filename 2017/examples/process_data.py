@@ -37,7 +37,7 @@ def download(file_name, expected_bytes):
     return file_path
 
 def read_data(file_path):
-    """ Read data into a list of tokens 
+    """ Read data into a list of tokens
     There should be 17,005,207 tokens
     """
     with zipfile.ZipFile(file_path) as f:
